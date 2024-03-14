@@ -38,9 +38,13 @@
     "watch": "tsc -watch -p ./",
     "lint": "eslint src --ext ts"
   },
+  "dependencies": {
+    "ws": "^8.16.0"
+  },
   "devDependencies": {
     "@types/node": "^20.11.27",
     "@types/vscode": "^1.87.0",
+    "@types/ws": "^8.5.10",
     "@typescript-eslint/eslint-plugin": "^7.2.0",
     "@typescript-eslint/parser": "^7.2.0",
     "eslint": "^8.57.0",
