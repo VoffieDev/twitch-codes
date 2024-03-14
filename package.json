@@ -27,8 +27,8 @@
   "contributes": {
     "commands": [
       {
-        "command": "twitch-codes.helloWorld",
-        "title": "Hello World"
+        "command": "twitchCodes.launch",
+        "title": "Twitch Codes: Launch"
       }
     ]
   },

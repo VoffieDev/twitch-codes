@@ -1,5 +1,12 @@
-import { type ExtensionContext } from "vscode";
+import { commands, window, type ExtensionContext } from "vscode";
+import { generateAccessToken } from "./Auth";
+import WebSocket from "ws";
 
+export function activate(context: ExtensionContext) {
+  console.log("Twitch Codes is up and running");
+
+  context.subscriptions.push(
+    commands.registerCommand("twitchCodes.launch", async () => {
       const user = await generateAccessToken();
 
       const socket = new WebSocket("wss://eventsub.wss.twitch.tv/ws");
@@ -40,6 +47,8 @@ import { type ExtensionContext } from "vscode";
           // TODO: Handle point rewards based on user config
         }
       });
+    })
+  );
 }
 
 export function deactivate() {}
