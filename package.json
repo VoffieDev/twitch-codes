@@ -18,6 +18,12 @@
     "url": "https://github.com/VoffieDev/twitch-codes.git"
   },
   "main": "./dist/extension.js",
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "extensionDependencies": [
+    "clarkio.vscode-twitch-authprovider"
+  ],
   "contributes": {
     "commands": [
       {
